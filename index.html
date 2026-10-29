@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scaphon · Liquid-cooled infrastructure for AI compute</title>
+  <meta name="description" content="Scaphon is building the liquid-cooled infrastructure for extreme-density AI compute, as AI racks head for a megawatt. Sydney, Australia. Briefings under NDA.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://scaphon.com/">
+  <meta name="theme-color" content="#0B0A12">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="author" content="Scaphon Pty Ltd">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Scaphon">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:url" content="https://scaphon.com/">
+  <meta property="og:title" content="Scaphon · AI outgrew the rack">
+  <meta property="og:description" content="AI racks are heading for a megawatt, and the rack was never designed for that. Scaphon is building what replaces it. Briefings under NDA.">
+  <meta property="og:image" content="https://scaphon.com/og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Scaphon. AI outgrew the rack. We're building what replaces it.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scaphon · AI outgrew the rack">
+  <meta name="twitter:description" content="AI racks are heading for a megawatt, and the rack was never designed for that. Scaphon is building what replaces it.">
+  <meta name="twitter:image" content="https://scaphon.com/og.png">
+  <meta name="twitter:image:alt" content="Scaphon. AI outgrew the rack. We're building what replaces it.">
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon-180.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preload" href="fonts/outfit-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://scaphon.com/#organization",
+        "name": "Scaphon",
+        "legalName": "Scaphon Pty Ltd",
+        "url": "https://scaphon.com/",
+        "logo": { "@type": "ImageObject", "url": "https://scaphon.com/icon-512.png", "width": 512, "height": 512 },
+        "image": "https://scaphon.com/og.png",
+        "description": "Scaphon is building the liquid-cooled infrastructure for extreme-density AI compute.",
+        "slogan": "AI outgrew the rack. We're building what replaces it.",
+        "email": "staycool@scaphon.com",
+        "foundingDate": "2026-07-01",
+        "taxID": "28 699 769 125",
+        "identifier": [
+          { "@type": "PropertyValue", "propertyID": "ABN", "value": "28 699 769 125" },
+          { "@type": "PropertyValue", "propertyID": "ACN", "value": "699 769 125" }
+        ],
+        "address": { "@type": "PostalAddress", "addressLocality": "Sydney", "addressRegion": "NSW", "addressCountry": "AU" },
+        "knowsAbout": ["Liquid cooling", "AI data centre infrastructure", "Data centre thermal management"],
+        "founder": { "@id": "https://scaphon.com/#founder" },
+        "sameAs": []
+      },
+      {
+        "@type": "Person",
+        "@id": "https://scaphon.com/#founder",
+        "name": "Eric Martinez Gurrea",
+        "jobTitle": "Founder and CEO",
+        "worksFor": { "@id": "https://scaphon.com/#organization" },
+        "sameAs": ["https://www.linkedin.com/in/ericmartinezg/"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://scaphon.com/#website",
+        "url": "https://scaphon.com/",
+        "name": "Scaphon",
+        "inLanguage": "en-AU",
+        "publisher": { "@id": "https://scaphon.com/#organization" }
+      }
+    ]
+  }
+  </script>
+  <!-- Analytics: paste the Cloudflare Web Analytics beacon here after go-live
+       (cookieless, no consent banner needed). -->
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Scaphon home"><img src="img/scaphon-logo.svg" alt="Scaphon" width="2579" height="292"></a>
+    <nav aria-label="Main">
+      <ul id="menu">
+        <li><a href="#bottleneck">Why it matters</a></li>
+        <li><a href="#signal">The curve</a></li>
+        <li><a href="#building">What we're building</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#briefing">Briefing</a></li>
+      </ul>
+    </nav>
+    <a class="btn small" href="#briefing">Request a briefing</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO: one sentence of what, nothing of how. The curve behind it is the
+       same exponential as the chart below, drawn once on load. -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-photo" aria-hidden="true"></div>
+    <svg class="hero-curve" viewBox="0 0 1200 700" preserveAspectRatio="xMaxYMax meet" aria-hidden="true">
+      <defs>
+        <linearGradient id="heroStroke" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#FF3DA6" stop-opacity="0"/>
+          <stop offset=".45" stop-color="#FF3DA6" stop-opacity=".35"/>
+          <stop offset=".85" stop-color="#FF3DA6" stop-opacity="1"/>
+          <stop offset="1" stop-color="#FF3DA6" stop-opacity=".2"/>
+        </linearGradient>
+      </defs>
+      <path class="hero-line" d="M0.0 693.9 L10.0 693.7 L20.0 693.4 L30.0 693.2 L40.0 692.9 L50.0 692.6 L60.0 692.3 L70.0 692.0 L80.0 691.7 L90.0 691.3 L100.0 691.0 L110.0 690.6 L120.0 690.3 L130.0 689.9 L140.0 689.5 L150.0 689.0 L160.0 688.6 L170.0 688.1 L180.0 687.6 L190.0 687.2 L200.0 686.6 L210.0 686.1 L220.0 685.5 L230.0 685.0 L240.0 684.3 L250.0 683.7 L260.0 683.1 L270.0 682.4 L280.0 681.7 L290.0 680.9 L300.0 680.2 L310.0 679.4 L320.0 678.5 L330.0 677.7 L340.0 676.8 L350.0 675.8 L360.0 674.9 L370.0 673.8 L380.0 672.8 L390.0 671.7 L400.0 670.5 L410.0 669.4 L420.0 668.1 L430.0 666.8 L440.0 665.5 L450.0 664.1 L460.0 662.7 L470.0 661.2 L480.0 659.6 L490.0 658.0 L500.0 656.3 L510.0 654.5 L520.0 652.7 L530.0 650.8 L540.0 648.8 L550.0 646.7 L560.0 644.6 L570.0 642.4 L580.0 640.0 L590.0 637.6 L600.0 635.1 L610.0 632.5 L620.0 629.8 L630.0 626.9 L640.0 624.0 L650.0 620.9 L660.0 617.7 L670.0 614.4 L680.0 611.0 L690.0 607.4 L700.0 603.7 L710.0 599.8 L720.0 595.7 L730.0 591.5 L740.0 587.2 L750.0 582.6 L760.0 577.9 L770.0 573.0 L780.0 567.9 L790.0 562.5 L800.0 557.0 L810.0 551.2 L820.0 545.3 L830.0 539.0 L840.0 532.5 L850.0 525.8 L860.0 518.8 L870.0 511.5 L880.0 503.9 L890.0 496.0 L900.0 487.7 L910.0 479.2 L920.0 470.3 L930.0 461.0 L940.0 451.4 L950.0 441.4 L960.0 431.0 L970.0 420.1 L980.0 408.9 L990.0 397.1 L1000.0 384.9 L1010.0 372.2 L1020.0 359.0 L1030.0 345.3 L1040.0 331.0 L1050.0 316.1 L1060.0 300.7 L1070.0 284.6 L1080.0 267.8 L1090.0 250.4 L1100.0 232.3 L1110.0 213.5 L1120.0 193.9 L1130.0 173.5 L1140.0 152.3 L1150.0 130.2 L1160.0 107.2 L1170.0 83.3 L1180.0 58.5 L1190.0 32.7 L1200.0 5.8" pathLength="1"/>
+    </svg>
+    <div class="wrap">
+      <div class="eyebrow"><b>In development</b> &nbsp;·&nbsp; Sydney, Australia</div>
+      <h1 id="hero-title"><span class="wm"><span class="sr-only">Scaphon</span><img src="img/scaphon-wordmark.svg" alt="" aria-hidden="true" width="1614" height="180"></span> is building hybrid liquid&#8209;cooled infrastructure for extreme&#8209;density AI.</h1>
+    </div>
+    <a class="scroll-cue" href="#thesis" aria-label="Scroll to the thesis"><span>Scroll</span><i aria-hidden="true"></i></a>
+  </section>
+
+  <section id="thesis" class="thesis" aria-labelledby="thesis-title">
+    <div class="wrap reveal">
+      <div class="label">The thesis</div>
+      <h2 id="thesis-title">AI outgrew the rack.<br><span class="accent">We're building what replaces it.</span></h2>
+      <p class="lead">AI racks are heading for a megawatt, and the rack was never designed for that. Each generation asks for more power, more cooling and more floor than the frame can give, and the industry answers with sidecar racks and rebuilt halls. The details of what replaces it are shared under NDA.</p>
+      <div class="cta-row">
+        <a class="btn" href="#briefing">Request a briefing <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="#signal">See the curve</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT MATTERS: one statement, no numbers to defend; the numbers live in the chart -->
+  <section id="bottleneck" class="alt statement-band" aria-labelledby="bottleneck-title">
+    <div class="wrap reveal">
+      <div class="label">Why it matters</div>
+      <h2 id="bottleneck-title" class="statement">Every operator is being asked to bet a <span class="accent">30-year building</span> on cooling that lasts <span class="accent">one GPU generation</span>.</h2>
+      <ul class="verdicts">
+        <li class="verdict"><span class="v-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 1-7 4-7 2 0 3 2 1 4l-5 3M14 12c4 0 7 1 7 4 0 2-2 3-4 1l-3-5M12 14c0 4-1 7-4 7-2 0-3-2-1-4l5-3M10 12c-4 0-7-1-7-4 0-2 2-3 4-1l3 5"/></svg></span><span class="v-k">Air</span><span class="v-t">Out of headroom.</span><span class="v-d">Fans and air handling stopped keeping up with AI racks several GPU generations ago.</span></li>
+        <li class="verdict"><span class="v-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="7" width="14" height="10" rx="1.5"/><path d="M8 7V4M16 7V4M8 11h8M8 14h8"/></svg></span><span class="v-k">Cold plates</span><span class="v-t">Stop at the chip.</span><span class="v-d">They take the heat off the processor and its memory. Fans and air still cool the rest of the server.</span></li>
+        <li class="verdict"><span class="v-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V8"/><path d="M4 11c2 1 4 1 6 0s4-1 6 0 3 1 4 0"/><path d="M10 3v9M14 3v9"/></svg></span><span class="v-k">Immersion tanks</span><span class="v-t">Cool everything.</span><span class="v-d">Every repair lifts a dripping server from a bath, a service model hyperscale won't run.</span></li>
+        <li class="verdict last"><span class="v-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="3" width="12" height="18" rx="1"/><path d="M6 8h12M6 13h12M6 18h12" stroke-dasharray="2 2"/></svg></span><span class="v-k">The rack</span><span class="v-t">Being redesigned.</span><span class="v-d">NVIDIA's Kyber and AMD's Helios both break with the rack layout used since 1965.</span></li>
+      </ul>
+      <p class="statement-close">Scaphon is built for the hall that has to <span class="accent">outlive all of them</span>.</p>
+    </div>
+  </section>
+
+  <!-- THE SIGNAL: the thesis, proved with public data only -->
+  <section id="signal" aria-labelledby="signal-title">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="label">The curve</div>
+        <h2 id="signal-title">Chipmakers double rack power every <span class="accent">18 months</span>. <span class="accent">Heat, service, space and water</span> have to keep up.</h2>
+        <p class="lead" style="margin-top:22px">15 kW in 2020. Over 200 kW today. 600 kW, then beyond 1 MW, before 2030. The chart tracks power, the number every chip roadmap leads with. Behind it, every step up the curve concentrates more heat in the same rack, puts more compute behind every repair, needs more floor for power and cooling, and leaves more of that heat to reject outside.</p>
+      </div>
+      <figure class="chart reveal" id="chart">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Power per rack over time</div>
+            <div class="chart-sub">NVIDIA and AMD reference racks, kW, by volume-shipment year, with trend line</div>
+          </div>
+          <ul class="legend" aria-hidden="true">
+            <li><svg width="12" height="12"><circle cx="6" cy="6" r="4.5" fill="#FF3DA6"/></svg>NVIDIA reference rack</li>
+            <li><svg width="14" height="14"><path d="M7 1 L13 7 L7 13 L1 7 Z" fill="#F57A20"/></svg>AMD Helios</li>
+            <li><svg width="14" height="14"><circle cx="7" cy="7" r="4.5" fill="none" stroke="#FF3DA6" stroke-width="2"/></svg>Estimate</li>
+            <li><svg width="34" height="10"><line x1="1" y1="5" x2="16" y2="5" stroke="#FF3DA6" stroke-width="2"/><line x1="19" y1="5" x2="33" y2="5" stroke="#FF3DA6" stroke-width="2" stroke-dasharray="4 3"/></svg>Trend</li>
+            <li><svg width="14" height="14"><defs><pattern id="lgHatch" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="#FF3DA6" stroke-opacity=".6" stroke-width="1.2"/></pattern></defs><rect x="1" y="1" width="12" height="12" rx="2" fill="url(#lgHatch)" stroke="#C46A9C" stroke-opacity=".5"/></svg>Projected</li>
+          </ul>
+        </div>
+        <div class="plot-wrap">
+          <div id="densityPlot" class="plot" role="img" aria-label="Power per AI rack by year with a trend line. Air-cooled rack 10 to 20 kW before 2022. H100 and H200, four servers, about 40 kW, 2022 to 2024. GB200 about 120 kW in 2025. GB300 up to 140 kW in the second half of 2025. VR200 about 190 to 230 kW and AMD Helios about 246 kW, second half of 2026. VR300 Kyber rack about 600 kW, plotted at mid-2028. Feynman about 1 MW, estimated, plotted at 2029. The trend doubles roughly every 18 months and passes 1 MW in 2029."></div>
+          <div id="densityTip" class="tip" role="status" hidden></div>
+        </div>
+        <figcaption class="chart-note">Each rack is plotted when it is expected to ship in volume. The trend doubles about every <span id="densityDoubling">18</span> months.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- THE MARKET MOMENT: public deals only -->
+  <section id="market" class="alt" aria-labelledby="market-title">
+    <div class="wrap">
+      <div class="market reveal">
+        <div>
+          <div class="label">The market moment</div>
+          <h2 id="market-title">The direct-to-chip wave has been bought. <span class="accent">The next one is open.</span></h2>
+          <p class="lead" style="margin-top:22px">In under two years, five industrial groups bought data centre cooling companies, most built around cold plates and coolant distribution. The buyers are already looking further. The racks on the right of the curve, beyond 600 kW, will need more than cold plates.</p>
+        </div>
+        <div class="deals-col">
+          <div class="deals-total"><span class="t-n">US$16.7B</span><span class="t-l">in under two years</span></div>
+          <div class="deals-bar" aria-hidden="true"><span style="flex:9.5"></span><span style="flex:4.75"></span><span style="flex:1.0"></span><span style="flex:0.85"></span><span style="flex:0.553"></span></div>
+          <ul class="deals">
+            <li><a href="https://www.businesswire.com/news/home/20251103856036/en" target="_blank" rel="noopener" aria-label="Eaton acquires Boyd Thermal, US$9.5B, Nov 2025"><i aria-hidden="true"></i><span class="d-n">US$9.5B</span><span class="d-t">Boyd Thermal&nbsp;→ Eaton</span><span class="d-s">Nov 2025</span></a></li>
+            <li><a href="https://w.media/ecolab-to-acquire-coolit-systems-for-us-4-75-billion/" target="_blank" rel="noopener" aria-label="Ecolab acquires CoolIT Systems, US$4.75B, Mar 2026"><i aria-hidden="true"></i><span class="d-n">US$4.75B</span><span class="d-t">CoolIT&nbsp;→ Ecolab</span><span class="d-s">Mar 2026</span></a></li>
+            <li><a href="https://www.vertiv.com/en-us/about/news-and-events/corporate-news/vertiv-announces-intent-to-acquire-purgerite-a-leading-provider-of-specialized-fluid-management-services-to-expand-liquid-cooling-services-portfolio/" target="_blank" rel="noopener" aria-label="Vertiv acquires PurgeRite, US$1.0B, Nov 2025"><i aria-hidden="true"></i><span class="d-n">US$1.0B</span><span class="d-t">PurgeRite&nbsp;→ Vertiv</span><span class="d-s">Nov 2025</span></a></li>
+            <li><a href="https://www.datacenterdynamics.com/en/news/schneider-electric-acquires-majority-stake-in-cooling-company-motivair-corp/" target="_blank" rel="noopener" aria-label="Schneider Electric takes 75% of Motivair, US$850M, Oct 2024"><i aria-hidden="true"></i><span class="d-n">US$850M</span><span class="d-t">Motivair&nbsp;→ Schneider</span><span class="d-s">Oct 2024</span></a></li>
+            <li><a href="https://www.businesswire.com/news/home/20251202318183/en/Trane-Technologies-to-Acquire-Stellar-Energy-Digital-Business" target="_blank" rel="noopener" aria-label="Trane acquires Stellar Energy, US$553M, Dec 2025"><i aria-hidden="true"></i><span class="d-n">US$553M</span><span class="d-t">Stellar Energy&nbsp;→ Trane</span><span class="d-s">Dec 2025</span></a></li>
+          </ul>
+          <p class="deals-more">Plus, undisclosed:<br>LiquidStack&nbsp;→ Trane · JetCool&nbsp;→ Flex · Chilldyne&nbsp;→ Daikin</p>
+        </div>
+      </div>
+      <p class="statement-close reveal">The incumbents bought the cold-plate era. The next platform is <span class="accent">still unclaimed</span>, and Scaphon is building it.</p>
+    </div>
+  </section>
+
+  <!-- WHAT WE'RE BUILDING: beliefs stated as outcomes, one image, no mechanism -->
+  <section id="building" aria-labelledby="building-title">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="label">What we're building</div>
+        <h2 id="building-title">A <span class="accent">new form factor</span> for liquid-cooled compute, built to replace the rack.</h2>
+        <p class="lead" style="margin-top:22px">Liquid carries 1,400 to 3,500 times more heat per litre than air, yet every liquid cooling option on the market still leaves the operator a trade: heat left on air, a tank to service, or a facility to rebuild. Scaphon is designed around five commitments instead.</p>
+      </div>
+      <div class="building reveal">
+        <ol class="beliefs">
+          <li><b>One server out, the rest keep running.</b><span>A server is replaced without draining a bath or stopping its neighbours.</span></li>
+          <li><b>Hybrid liquid cooling, no air.</b><span>Every part of the server is liquid-cooled, including the parts cold plates leave to the air.</span></li>
+          <li><b>The cooling changes with the silicon. The building stays.</b><span>Each GPU generation gets the cooling it needs, and the hall it lands in does not have to be rebuilt.</span></li>
+          <li><b>More megawatts per square metre.</b><span>Floor density is a primary design target, because power-ready floor is the scarce input.</span></li>
+          <li><b>Dry heat rejection, near-zero water.</b><span>Return water warm enough for dry coolers with no chillers, and heat in one loop, ready for reuse.</span></li>
+        </ol>
+        <figure class="glimpse">
+          <img src="img/concept-unit.webp" alt="Concept render of a Scaphon unit, filtered to show only its light" width="846" height="1632" loading="lazy" decoding="async">
+          <figcaption>Concept render · details under NDA</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE WE ARE -->
+  <section id="status" class="alt" aria-labelledby="status-title">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="label">Where we are</div>
+        <h2 id="status-title">From model to <span class="accent">metal</span>.</h2>
+        <p class="lead" style="margin-top:22px">Scaphon is at pre-seed. The design is complete on paper, and the programme ahead turns it into hardware one gate at a time.</p>
+      </div>
+      <ol class="timeline reveal">
+        <li class="done"><span class="t-k">Done</span><span class="t-t">Architecture and models</span><span class="t-v">Architecture defined. Thermal, hydraulic and floor-space models built. Bill of materials costed.</span></li>
+        <li class="now"><span class="t-k">Now</span><span class="t-t">Filing and briefings</span><span class="t-v">Patent applications in preparation with counsel. Partner, pilot and investor briefings under NDA.</span></li>
+        <li class="next"><span class="t-k">Next</span><span class="t-t">Four gates</span><span class="t-v">A prototype programme from component to full system, with each gate passed on measured data.</span></li>
+        <li class="then"><span class="t-k">Then</span><span class="t-t">Running compute</span><span class="t-v">A live demonstration on real AI hardware at full heat load, then a first pilot inside an operator&#8217;s live data hall.</span></li>
+      </ol>
+      <p class="statement-close reveal">Every claim on this page gets <span class="accent">tested before it is sold</span>.</p>
+    </div>
+  </section>
+
+  <!-- FOUNDER: figures and a first-person note instead of a bio -->
+  <section id="team" aria-labelledby="team-title">
+    <div class="wrap">
+      <div class="label reveal">Who's building it</div>
+      <div class="founder reveal">
+        <img src="img/eric-martinez-gurrea-scaphon.webp" alt="Eric Martinez Gurrea" width="560" height="621" loading="lazy" decoding="async">
+        <div class="founder-body">
+          <h2 id="team-title">Built by someone who has <span class="accent">shipped liquid cooling</span>.</h2>
+          <blockquote>I owned a flagship immersion product line sold worldwide, then designed direct-to-chip for hyperscale halls. Along the way I heard every reason hyperscale says no to immersion, despite the physics: wet repairs, lost floor space, and halls rebuilt around the tanks. Scaphon is designed to answer every one of them.</blockquote>
+          <div class="sig"><b>Eric Martinez Gurrea</b><span>Founder &amp; CEO</span></div>
+        </div>
+      </div>
+      <dl class="stats reveal">
+        <div><dt>1.52 GW</dt><dd>Liquid-cooled capacity designed since 2020</dd></div>
+        <div><dt>7</dt><dd>Hyperscale and cloud operators served</dd></div>
+        <div><dt>14+ yrs</dt><dd>Thermal and hydraulic engineering</dd></div>
+        <div><dt>300 MW</dt><dd>Largest single design, a direct-to-chip AI campus</dd></div>
+        <div class="key"><dt>US$100M+</dt><dd>Revenue from the immersion product lines he owned at Submer</dd></div>
+      </dl>
+      <div class="core reveal">
+        <div class="core-head">
+          <h3>A lean core, on purpose. <span class="accent">Four roles, all on the critical path.</span></h3>
+          <p>A commercial lead who is also a shareholder, and two engineering roles the seed round funds.</p>
+        </div>
+        <ul class="roles">
+          <li><span class="r-k">In place · Shareholder</span><b>Business development and partnerships</b><span class="r-d">27 years in data centre infrastructure across Europe and Asia-Pacific. Has led regional sales teams with P&amp;L responsibility and introduced prefabricated modular data centres to the region.</span></li>
+          <li><span class="r-k">Seed hire</span><b>Mechanical and hydraulic engineering</b><span class="r-d">A senior engineer for the prototype programme: thermal-hydraulic design, CAD, fabrication follow-up and the test rig.</span></li>
+          <li><span class="r-k">Seed hire</span><b>Electrical and controls engineering</b><span class="r-d">Power, instrumentation and PLC control for the test rig, so every gate is measured, logged and repeatable.</span></li>
+        </ul>
+        <p class="bought">Bought in: patent counsel · fabrication · specialist engineering reviews</p>
+      </div>
+      <p class="statement-close reveal">Every dollar raised goes into <span class="accent">hardware that proves the claim</span>.</p>
+    </div>
+  </section>
+
+  <!-- BRIEFING: the gated door, and what is behind it -->
+  <section id="briefing" class="contact" aria-labelledby="briefing-title">
+    <div class="wrap reveal">
+      <div class="label">Briefing</div>
+      <h2 id="briefing-title">The rest is <span class="accent">under NDA</span>.</h2>
+      <ol class="steps">
+        <li><span class="s-n">01</span><b>Write to us</b><span class="s-d">Tell us who you are. We reply within two business days.</span></li>
+        <li><span class="s-n">02</span><b>Mutual NDA</b><span class="s-d">Sent with our reply and signed before anything technical is shared.</span></li>
+        <li><span class="s-n">03</span><b>Briefing</b><span class="s-d">The architecture, the design targets, the prototype programme and the IP position.</span></li>
+      </ol>
+      <div class="routes">
+        <a class="route" href="mailto:staycool@scaphon.com?subject=Scaphon%20briefing%3A%20operator"><b>I run data centres</b><span>Operators planning halls for the next generations of AI compute</span><i>Email us <em aria-hidden="true">&rarr;</em></i></a>
+        <a class="route" href="mailto:staycool@scaphon.com?subject=Scaphon%20briefing%3A%20partner"><b>I build hardware</b><span>Server, power and cooling manufacturers looking to partner</span><i>Email us <em aria-hidden="true">&rarr;</em></i></a>
+        <a class="route" href="mailto:staycool@scaphon.com?subject=Scaphon%20briefing%3A%20investor"><b>I invest</b><span>Deep-tech and infrastructure investors at pre-seed and seed, wholesale and sophisticated only</span><i>Email us <em aria-hidden="true">&rarr;</em></i></a>
+      </div>
+      <p class="mail-line">Or write to <a href="mailto:staycool@scaphon.com">staycool@scaphon.com</a></p>
+      <div class="meta">Scaphon Pty Ltd &nbsp;·&nbsp; ABN 28 699 769 125 &nbsp;·&nbsp; Sydney, Australia</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Scaphon home"><img src="img/scaphon-logo.svg" alt="Scaphon" width="2579" height="292" loading="lazy"></a>
+    <div class="foot-links">
+      <a href="#signal">The curve</a>
+      <a href="#team">Team</a>
+      <a href="mailto:staycool@scaphon.com">Email</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+    <div class="fine">
+      <span>© 2026 Scaphon Pty Ltd. Nothing on this site is an offer of securities or financial product advice.</span>
+      <span class="stay">Stay cool.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
+<script src="chart.js" defer></script>
+</body>
+</html>
