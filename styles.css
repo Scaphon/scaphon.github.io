@@ -126,7 +126,7 @@ p { margin: 0 0 1em; }
 .hero h1 .wm { white-space: nowrap; }
 /* Three set lines on wide screens; natural wrapping on phones and small tablets. */
 @media (max-width: 760px) { .hero h1 .br-wide { display: none; } }
-@media (max-width: 480px) { .hero h1 { font-size: 29px; } }
+@media (max-width: 480px) { .hero h1 { font-size: 27px; } }
 .hero h1 .wm img { display: inline-block; height: 0.74em; width: auto; vertical-align: -0.04em; margin-right: 0.28em; }
 .hero-mark { display: block; width: clamp(60px, 5.4vw, 84px); height: auto; margin-bottom: 26px; }
 .scroll-cue { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; font-family: var(--mono); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--dim); transition: color .2s; }
